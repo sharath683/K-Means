@@ -82,7 +82,7 @@ public class KMeansClustering {
         List<Double> centroidsY= new ArrayList<Double>() ;
         HashSet<Integer>hashSet=new HashSet<>();
         Random random = new Random();
-        //now add random number to this set
+        //Random selection of the points as the initial centroids of the k clusters
         while(true)
         {
             hashSet.add(random.nextInt(points.size()));
@@ -92,7 +92,7 @@ public class KMeansClustering {
         List randList = new ArrayList<>(hashSet);
         for(int i=0;i<k;i++){
             clusters.put(i,new ArrayList<CoOrdinate>());
-            centroids.add(points.get((int)randList.get(i)));
+            centroids.add(points.get((int)randList.get(i))); // chose random points as centroids based on the random number generated above
         }
         int iter = 0;
         boolean breakCondition=false;

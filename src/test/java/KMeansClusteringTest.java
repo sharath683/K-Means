@@ -13,6 +13,10 @@ import static junit.framework.TestCase.assertEquals;
 
 public class KMeansClusteringTest {
     @Test
+    /**
+     * Unit test to verify the K-Means clustering with the minimal test-case. K-Means implementation is not deterministic as it
+     * hugely depends on the initial selection of centroids which is done randomly in this implementation
+     */
     public void testSampleKMeans() {
         List<Double> xList = Arrays.asList(1.0, 2.0, 12.0, 14.0);
         List<Double> yList  = Arrays.asList(1.0, 1.0, 2.0, 2.0);
